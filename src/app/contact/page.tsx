@@ -43,7 +43,7 @@ export default function ContactPage() {
               <div className="space-y-2">
                 <p className="flex items-center gap-2 text-[12px] font-sans text-ink-soft">
                   <Mail size={13} strokeWidth={1.5} className="text-ink-muted" />
-                  editor@theusvisareport.com
+                  support@theusvisanews.com
                 </p>
                 <p className="flex items-center gap-2 text-[12px] font-sans text-ink-soft">
                   <MapPin size={13} strokeWidth={1.5} className="text-ink-muted" />
