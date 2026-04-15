@@ -1,5 +1,6 @@
 import { CalendlyFull } from "@/components/CalendlyEmbed";
 import { Shield, CheckCircle, Users, Clock } from "lucide-react";
+import BackButton from "@/components/BackButton";
 
 export const metadata = {
   title: "Schedule Consultation — The US Visa News",
@@ -68,6 +69,7 @@ export default function AssessmentPage() {
           you agree to be contacted regarding your immigration inquiry. This
           does not constitute legal advice.
         </p>
+        <BackButton />
       </div>
     </div>
   );

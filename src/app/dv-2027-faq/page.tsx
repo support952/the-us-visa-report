@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
+import BackButton, { BackButtonInline } from "@/components/BackButton";
 
 export const metadata = {
   title: "DV-2027 Diversity Visa Lottery FAQ — The US Visa News",
@@ -133,12 +134,13 @@ export default function FAQPage() {
     <div className="bg-paper">
       {/* Breadcrumbs */}
       <div className="bg-white border-b border-rule">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
-          <nav className="flex items-center gap-1 text-[10px] font-sans text-ink-muted">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between">
+          <nav className="flex items-center gap-1 text-[10px] font-sans text-ink-muted min-w-0">
             <Link href="/" className="hover:text-ink transition-colors">Home</Link>
             <ChevronRight size={9} strokeWidth={1.5} />
             <span className="text-ink-soft">DV-2027 FAQ</span>
           </nav>
+          <BackButtonInline />
         </div>
       </div>
 
@@ -193,6 +195,7 @@ export default function FAQPage() {
             purposes only and does not constitute legal advice. Immigration law is complex and
             fact-specific. Consult a qualified immigration attorney for advice on your situation.
           </div>
+          <BackButton />
         </div>
       </div>
     </div>

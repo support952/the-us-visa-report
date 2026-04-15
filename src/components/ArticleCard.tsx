@@ -11,18 +11,9 @@ import { getImageForSlug } from "@/lib/images";
 export function ArticleCardLarge({ article }: { article: Article }) {
   return (
     <Link href={`/news/${article.slug}`} className="group block">
-      <div className="grid grid-cols-1 md:grid-cols-2 bg-white border border-rule overflow-hidden">
-        <div className="relative aspect-[4/3] md:aspect-auto">
-          <Image
-            src="/images/A_powerful_high-resolution_edi_Nano_Banana_2_35793.jpg"
-            alt={article.title}
-            fill
-            className="object-cover"
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        </div>
-        <div className="p-5 sm:p-6 md:p-8 lg:p-10 flex flex-col justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
+        {/* Left: text */}
+        <div className="flex flex-col justify-center">
           {article.isBreaking && (
             <span className="inline-block self-start bg-crimson text-white text-[9px] font-sans font-semibold uppercase tracking-[0.18em] px-2.5 py-0.5 mb-3">
               Breaking
@@ -31,14 +22,14 @@ export function ArticleCardLarge({ article }: { article: Article }) {
           <span className="text-[9px] font-sans font-semibold text-crimson-text uppercase tracking-[0.25em]">
             {article.category}
           </span>
-          <h2 className="font-serif text-lg sm:text-xl md:text-2xl lg:text-[1.75rem] font-bold text-ink mt-2 leading-[1.15] tracking-tight group-hover:text-ink-soft transition-colors">
+          <h2 className="font-serif text-2xl sm:text-[1.75rem] md:text-[2rem] lg:text-[2.4rem] font-bold text-ink mt-2 leading-[1.1] tracking-tight group-hover:text-ink-soft transition-colors">
             {article.title}
           </h2>
-          <p className="text-[13px] text-ink-soft mt-3 leading-relaxed font-sans font-light line-clamp-3">
+          <p className="text-[13px] sm:text-[14px] text-ink-soft mt-3 leading-relaxed font-sans font-light line-clamp-4">
             {article.excerpt}
           </p>
           <div className="flex items-center gap-2 mt-4 pt-4 border-t border-rule text-[10px] text-ink-muted font-sans">
-            <span className="font-medium text-ink-soft">{article.author.name}</span>
+            <span className="font-medium text-ink-soft">By {article.author.name}</span>
             <span>&middot;</span>
             <span>{formatDate(article.publishedDate)}</span>
             <span>&middot;</span>
@@ -47,6 +38,17 @@ export function ArticleCardLarge({ article }: { article: Article }) {
               {article.readTime} min
             </span>
           </div>
+        </div>
+        {/* Right: image */}
+        <div className="relative aspect-[4/3] overflow-hidden order-first md:order-last">
+          <Image
+            src="/images/A_powerful_high-resolution_edi_Nano_Banana_2_35793.jpg"
+            alt={article.title}
+            fill
+            className="object-cover"
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
       </div>
     </Link>

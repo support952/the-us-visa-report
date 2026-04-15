@@ -1,6 +1,7 @@
 import {
   getFeaturedArticle,
   getLatestArticles,
+  formatDate,
 } from "@/lib/articles";
 import {
   ArticleCardLarge,
@@ -21,21 +22,23 @@ export default function HomePage() {
 
   return (
     <div className="bg-paper">
-      {/* ── HERO ── */}
+      {/* ── HERO — WashPost style ── */}
       <section className="bg-white border-b border-rule">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-14">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12">
-            <div className="lg:col-span-3">
-              {featured && <ArticleCardLarge article={featured} />}
-            </div>
-            <div className="lg:col-span-2">
-              <h2 className="text-[9px] font-sans font-semibold text-ink-muted uppercase tracking-[0.25em] pb-2.5 border-b border-rule mb-0">
-                Top Policy Briefs
-              </h2>
-              {topBriefs.map((article, i) => (
-                <ArticleBrief key={article.slug} article={article} index={i} />
-              ))}
-            </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
+          {featured && <ArticleCardLarge article={featured} />}
+
+          {/* Secondary headlines below hero — text only, like WashPost */}
+          <div className="mt-6 lg:mt-8 pt-6 border-t border-rule grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4">
+            {topBriefs.map((article) => (
+              <Link key={article.slug} href={`/news/${article.slug}`} className="group block">
+                <h3 className="font-serif text-[15px] sm:text-base font-bold text-ink leading-snug group-hover:text-ink-soft transition-colors">
+                  {article.title}
+                </h3>
+                <p className="text-[10px] font-sans text-ink-muted mt-1.5">
+                  By {article.author.name} &middot; {formatDate(article.publishedDate)}
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

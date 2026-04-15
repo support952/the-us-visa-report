@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronRight, CheckCircle, AlertTriangle } from "lucide-react";
+import BackButton, { BackButtonInline } from "@/components/BackButton";
 
 export const metadata = {
   title: "DV-2027 Passport Scan Guide — The US Visa News",
@@ -11,14 +12,15 @@ export default function PassportGuidePage() {
     <div className="bg-paper">
       {/* Breadcrumbs */}
       <div className="bg-white border-b border-rule">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
-          <nav className="flex items-center gap-1 text-[10px] font-sans text-ink-muted">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between">
+          <nav className="flex items-center gap-1 text-[10px] font-sans text-ink-muted min-w-0">
             <Link href="/" className="hover:text-ink transition-colors">Home</Link>
             <ChevronRight size={9} strokeWidth={1.5} />
             <Link href="/dv-2027-faq" className="hover:text-ink transition-colors">DV-2027</Link>
             <ChevronRight size={9} strokeWidth={1.5} />
             <span className="text-ink-soft">Passport Scan Guide</span>
           </nav>
+          <BackButtonInline />
         </div>
       </div>
 
@@ -166,6 +168,7 @@ export default function PassportGuidePage() {
           <div className="mt-8 text-[10px] font-sans text-ink-faint leading-relaxed">
             <strong className="text-ink-muted">Disclaimer:</strong> This guide is for informational purposes only. Verify all requirements at dvprogram.state.gov before submitting your entry.
           </div>
+          <BackButton />
         </div>
       </div>
     </div>

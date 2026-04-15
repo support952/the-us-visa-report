@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { getArticleBySlug, getRelatedArticles, getAllArticles, formatDate } from "@/lib/articles";
-import { ChevronRight, Clock, User, Calendar } from "lucide-react";
+import { ChevronRight, Clock } from "lucide-react";
 import ReadingProgressBar from "@/components/ReadingProgressBar";
 import KeyTakeaways from "@/components/KeyTakeaways";
 import AuthorBio from "@/components/AuthorBio";
@@ -12,6 +12,7 @@ import EligibilityQuiz from "@/components/EligibilityQuiz";
 import VisaSuccessTracker from "@/components/VisaSuccessTracker";
 import { ArticleCardGrid } from "@/components/ArticleCard";
 import { getImageForSlug } from "@/lib/images";
+import BackButton, { BackButtonInline } from "@/components/BackButton";
 
 function generateTakeaways(content: string): string[] {
   const lines = content.split("\n").filter((l) => l.trim());
@@ -57,75 +58,75 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <article className="bg-paper">
         {/* Breadcrumbs */}
         <div className="bg-white border-b border-rule">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
-            <nav className="flex items-center gap-1 text-[10px] font-sans text-ink-muted">
-              <Link href="/" className="hover:text-ink transition-colors">Home</Link>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between">
+            <nav className="flex items-center gap-1 text-[10px] font-sans text-ink-muted min-w-0">
+              <Link href="/" className="hover:text-ink transition-colors flex-shrink-0">Home</Link>
               <ChevronRight size={9} strokeWidth={1.5} />
               <Link href={`/category/${article.category.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-ink transition-colors">{article.category}</Link>
               <ChevronRight size={9} strokeWidth={1.5} />
               <span className="text-ink-soft truncate max-w-[200px]">{article.title}</span>
             </nav>
+            <BackButtonInline />
           </div>
         </div>
 
-        {/* Header */}
+        {/* Header — WashPost style: text left, image right */}
         <header className="bg-white border-b border-rule">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-14">
-            <div className="max-w-3xl">
-              <span className="text-[9px] font-sans font-semibold text-crimson-text uppercase tracking-[0.2em]">
-                {article.category}
-                {article.isBreaking && <span className="ml-2 px-2 py-0.5 bg-crimson text-paper text-[8px] tracking-wider">Breaking</span>}
-              </span>
-              <h1 className="font-serif text-xl sm:text-2xl md:text-[2.2rem] font-bold text-ink mt-3 leading-[1.12] tracking-tight">
-                {article.title}
-              </h1>
-              <p className="text-[13px] sm:text-[15px] font-sans text-ink-soft mt-3 sm:mt-4 leading-relaxed font-light">{article.excerpt}</p>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-14">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Left: headline + metadata */}
+              <div>
+                <span className="text-[9px] font-sans font-semibold text-crimson-text uppercase tracking-[0.2em]">
+                  {article.category}
+                  {article.isBreaking && <span className="ml-2 px-2 py-0.5 bg-crimson text-paper text-[8px] tracking-wider">Breaking</span>}
+                </span>
+                <h1 className="font-serif text-2xl sm:text-[1.85rem] lg:text-[2.5rem] font-bold text-ink mt-3 leading-[1.1] tracking-tight">
+                  {article.title}
+                </h1>
+                <p className="text-[14px] sm:text-[16px] font-sans text-ink-soft mt-4 leading-[1.7] font-light">{article.excerpt}</p>
 
-              {/* Editorial metadata */}
-              <div className="mt-5 sm:mt-8 pt-4 sm:pt-5 border-t border-rule space-y-3">
-                <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-4">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-paper-warm border border-rule flex items-center justify-center rounded-full">
-                      <User size={14} strokeWidth={1.5} className="text-ink-faint" />
-                    </div>
-                    <div>
-                      <p className="text-[11px] font-sans font-medium text-ink">{article.author.name}</p>
-                      <p className="text-[9px] font-sans text-ink-muted">{article.author.role}</p>
-                    </div>
+                {/* Author line — WashPost style */}
+                <div className="mt-6 pt-4 border-t border-rule">
+                  <div className="flex items-center gap-2 text-[12px] font-sans">
+                    <span className="font-medium text-ink">By {article.author.name}</span>
+                    <span className="text-ink-faint">&middot;</span>
+                    <span className="text-ink-muted">{formatDate(article.publishedDate)}</span>
+                    <span className="text-ink-faint">&middot;</span>
+                    <span className="text-ink-muted flex items-center gap-0.5"><Clock size={11} strokeWidth={1.5} />{article.readTime} min</span>
                   </div>
-                  <div className="flex items-center gap-3 text-[10px] font-sans text-ink-muted">
-                    <span className="flex items-center gap-1"><Calendar size={10} strokeWidth={1.5} />{formatDate(article.publishedDate)}</span>
-                    <span className="flex items-center gap-1"><Clock size={10} strokeWidth={1.5} />{article.readTime} min read</span>
+                  <div className="flex items-center justify-between mt-3">
+                    <div className="flex flex-wrap gap-x-4 text-[9px] font-sans text-ink-faint">
+                      <span>{article.author.role}</span>
+                      <span>Edited by Policy Desk</span>
+                    </div>
+                    <SocialShare title={article.title} />
                   </div>
-                  <div className="sm:ml-auto"><SocialShare title={article.title} /></div>
                 </div>
-                <div className="flex flex-wrap gap-x-4 gap-y-0.5 text-[9px] font-sans text-ink-faint">
-                  <span>Reported by {article.author.name}</span>
-                  <span>Edited by Policy Desk</span>
-                  <span>Last verified {formatDate(article.publishedDate)}</span>
+              </div>
+
+              {/* Right: image */}
+              <div className="order-first lg:order-last">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={getImageForSlug(article.slug)}
+                    alt={article.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority
+                  />
                 </div>
+                <p className="text-[10px] font-sans text-ink-faint mt-2 leading-relaxed italic">
+                  {article.title}. (The US Visa News)
+                </p>
               </div>
             </div>
           </div>
         </header>
 
-        {/* Featured Image */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 lg:pt-10">
-          <div className="relative aspect-[16/9] sm:aspect-[21/9] max-w-3xl overflow-hidden border border-rule">
-            <Image
-              src={getImageForSlug(article.slug)}
-              alt={article.title}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 66vw"
-              priority
-            />
-          </div>
-        </div>
-
         {/* Body */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-14">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-14">
             <div className="lg:col-span-2">
               <KeyTakeaways takeaways={takeaways} />
               <ArticleRenderer content={article.content} topic={article.category} />
@@ -172,6 +173,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             </div>
           </section>
         )}
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BackButton />
+        </div>
       </article>
     </>
   );
