@@ -31,7 +31,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur-sm">
+      <header className="sticky top-8 sm:top-7 z-50 bg-paper/95 backdrop-blur-sm">
         {/* Masthead — hidden on mobile, shown on tablet+ */}
         <div className="hidden md:block max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-center border-b border-rule">
           <Link href="/" className="inline-block">
