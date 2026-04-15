@@ -1,7 +1,5 @@
 import {
-  getAllArticles,
   getFeaturedArticle,
-  getMostReadArticles,
   getLatestArticles,
 } from "@/lib/articles";
 import {
@@ -45,7 +43,7 @@ export default function HomePage() {
       {/* ── MAIN ── */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 lg:gap-20">
-          {/* Left — clean, just articles */}
+          {/* Left */}
           <div className="lg:col-span-2 space-y-16">
             <div>
               <div className="flex items-center justify-between mb-6">
@@ -66,7 +64,7 @@ export default function HomePage() {
             <NewsletterInline />
           </div>
 
-          {/* Right — minimal sidebar */}
+          {/* Right — sidebar */}
           <aside className="space-y-6">
             <VisaSuccessTracker />
             <EligibilityQuiz />

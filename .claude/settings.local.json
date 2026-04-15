@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3002/assessment)",
+      "Bash(curl -s -o /dev/null -w \"home:%{http_code} \" http://localhost:3002/)",
+      "Bash(curl -s -o /dev/null -w \"article:%{http_code} \" http://localhost:3002/news/diversity-visa-lottery-selection-opens-march-2026)",
+      "Bash(curl -s -o /dev/null -w \"faq:%{http_code} \" http://localhost:3002/dv-2027-faq)",
+      "Bash(curl -s -o /dev/null -w \"passport:%{http_code} \" http://localhost:3002/passport-guide)",
+      "Bash(curl -s -o /dev/null -w \"assessment:%{http_code}\" http://localhost:3002/assessment)",
+      "Bash(rm -f visa-stamp.jpg american-flag.jpg nyc-skyline.jpg globe-travel.jpg)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1508433957232-3107f5fd5995?w=800&h=500&fit=crop&q=80\" -o statue-liberty.jpg)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1617581629397-a72507c3de9e?w=800&h=500&fit=crop&q=80\" -o american-flag2.jpg)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1578469645742-46cae010e5d6?w=800&h=500&fit=crop&q=80\" -o world-map.jpg)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=800&h=500&fit=crop&q=80\" -o airplane.jpg)",
+      "Bash(curl -s -o /dev/null -w \"passport:%{http_code}\" http://localhost:3002/passport-guide)",
+      "Bash(npx next *)",
+      "Bash(curl -s -o /dev/null -w \"article2:%{http_code} \" http://localhost:3002/news/h1b-visa-cap-reached-record-time-fy2026)",
+      "Bash(curl -s -o /dev/null -w \"assessment:%{http_code} \" http://localhost:3002/assessment)",
+      "Bash(curl -s -o /dev/null -w '__TRACKED_VAR__:%{http_code} ' http://localhost:3002/images/__TRACKED_VAR__)"
+    ]
+  }
+}

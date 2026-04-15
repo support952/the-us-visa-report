@@ -1,16 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Globe,
   GraduationCap,
   Briefcase,
-  User,
   ChevronRight,
   ChevronLeft,
-  CheckCircle,
   Lock,
+  CalendarCheck,
 } from "lucide-react";
+
+const CALENDLY_URL =
+  "https://calendly.com/support-ias/consultation-call-with-an-immigration-expert-29";
 
 const countries = [
   "Afghanistan", "Albania", "Algeria", "Bangladesh", "Brazil", "Cameroon",
@@ -29,61 +31,74 @@ const educationLevels = [
   "Trade Certificate (2+ Years)",
 ];
 
-const visaStatuses = [
-  "No Current U.S. Visa",
-  "Tourist Visa (B1/B2)",
-  "Student Visa (F-1/J-1)",
-  "Work Visa (H-1B/L-1/O-1)",
-  "DACA",
-  "Temporary Protected Status (TPS)",
-  "Pending Asylum",
-  "Other Nonimmigrant Status",
+const criminalOptions = [
+  "No — Clean Record",
+  "Minor Traffic Violations Only",
+  "Misdemeanor (Non-Violent)",
+  "Pending Case / Under Investigation",
+  "Yes — Prior Conviction",
+  "Prefer Not to Answer",
 ];
-
-interface FormData {
-  country: string;
-  education: string;
-  visaStatus: string;
-  fullName: string;
-  email: string;
-  phone: string;
-}
 
 export default function EligibilityQuiz({ variant = "sidebar" }: { variant?: "sidebar" | "full" }) {
   const [step, setStep] = useState(0);
-  const [formData, setFormData] = useState<FormData>({
-    country: "", education: "", visaStatus: "", fullName: "", email: "", phone: "",
+  const [formData, setFormData] = useState({
+    country: "", education: "", criminalRecord: "",
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [showCalendly, setShowCalendly] = useState(false);
+
+  // Load Calendly widget script when we reach the booking step
+  useEffect(() => {
+    if (!showCalendly) return;
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => { document.body.removeChild(script); };
+  }, [showCalendly]);
 
   const steps = [
     { title: "Country of Birth", icon: Globe },
     { title: "Education Level", icon: GraduationCap },
-    { title: "Immigration Status", icon: Briefcase },
-    { title: "Contact Information", icon: User },
+    { title: "Criminal Record", icon: Briefcase },
   ];
 
   const canProceed = () => {
     switch (step) {
       case 0: return formData.country !== "";
       case 1: return formData.education !== "";
-      case 2: return formData.visaStatus !== "";
-      case 3: return formData.fullName !== "" && formData.email !== "";
+      case 2: return formData.criminalRecord !== "";
       default: return false;
     }
   };
 
-  if (submitted) {
+  // After 3 steps → show Calendly embed
+  if (showCalendly) {
     return (
       <div className={`bg-paper-warm border border-rule ${variant === "full" ? "max-w-xl mx-auto" : ""}`}>
-        <div className="p-6 text-center">
-          <CheckCircle size={28} strokeWidth={1.5} className="text-emerald-700 mx-auto mb-3" />
-          <h4 className="font-serif text-base font-bold text-ink mb-1">Assessment Submitted</h4>
-          <p className="text-[11px] font-sans text-ink-soft leading-relaxed mb-3">
-            A senior policy analyst will prepare your eligibility report within 24-48 hours.
-          </p>
-          <p className="text-[9px] font-data text-ink-muted">REF: USV-{Date.now().toString(36).toUpperCase()}</p>
+        <div className="px-3 py-2 border-b border-rule flex items-center justify-between">
+          <span className="text-[9px] font-sans font-semibold text-ink uppercase tracking-[0.18em] flex items-center gap-1">
+            <CalendarCheck size={10} strokeWidth={2} />
+            Schedule Your Consultation
+          </span>
+          <button
+            onClick={() => { setShowCalendly(false); setStep(0); }}
+            className="text-[8px] font-sans text-ink-muted hover:text-ink transition-colors"
+          >
+            Start Over
+          </button>
         </div>
+        <div className="px-3 py-2 bg-white/50 border-b border-rule">
+          <p className="text-[10px] font-sans text-ink-soft leading-relaxed">
+            Based on your profile, you may be eligible for several immigration
+            pathways. Select a time below to speak with a senior analyst.
+          </p>
+        </div>
+        <div
+          className="calendly-inline-widget"
+          data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&hide_event_type_details=1&background_color=f4f3f0&text_color=1a1a1b&primary_color=1a1a1b`}
+          style={{ minWidth: "280px", height: variant === "full" ? "650px" : "520px", width: "100%" }}
+        />
       </div>
     );
   }
@@ -149,51 +164,32 @@ export default function EligibilityQuiz({ variant = "sidebar" }: { variant?: "si
 
         {step === 2 && (
           <div className="space-y-0.5">
-            {visaStatuses.map((status) => (
+            <p className="text-[10px] font-sans text-ink-muted mb-1.5">Do you have any criminal history?</p>
+            {criminalOptions.map((opt) => (
               <button
-                key={status}
-                onClick={() => setFormData({ ...formData, visaStatus: status })}
+                key={opt}
+                onClick={() => setFormData({ ...formData, criminalRecord: opt })}
                 className={`w-full text-left px-2.5 py-1.5 border text-[10px] font-sans transition-colors ${
-                  formData.visaStatus === status
+                  formData.criminalRecord === opt
                     ? "border-ink bg-ink/5 text-ink font-medium"
                     : "border-rule text-ink-soft hover:border-ink-faint"
                 }`}
               >
-                {status}
+                {opt}
               </button>
             ))}
           </div>
         )}
-
-        {step === 3 && (
-          <div className="space-y-2">
-            <div>
-              <label className="text-[9px] font-sans text-ink-muted uppercase tracking-wider block mb-0.5">Full Legal Name</label>
-              <input type="text" value={formData.fullName} onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                className="w-full px-2.5 py-1.5 border border-rule bg-white text-[11px] font-sans text-ink focus:outline-none focus:border-ink-muted" />
-            </div>
-            <div>
-              <label className="text-[9px] font-sans text-ink-muted uppercase tracking-wider block mb-0.5">Email Address</label>
-              <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-2.5 py-1.5 border border-rule bg-white text-[11px] font-sans text-ink focus:outline-none focus:border-ink-muted" />
-            </div>
-            <div>
-              <label className="text-[9px] font-sans text-ink-muted uppercase tracking-wider block mb-0.5">Phone (Optional)</label>
-              <input type="tel" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full px-2.5 py-1.5 border border-rule bg-white text-[11px] font-sans text-ink focus:outline-none focus:border-ink-muted" />
-            </div>
-          </div>
-        )}
       </div>
 
-      {/* Nav */}
+      {/* Navigation */}
       <div className="px-3 py-2.5 flex items-center justify-between border-t border-rule mt-2">
         {step > 0 ? (
           <button onClick={() => setStep(step - 1)} className="flex items-center gap-0.5 text-[10px] font-sans text-ink-muted hover:text-ink transition-colors">
             <ChevronLeft size={12} />Back
           </button>
         ) : <span />}
-        {step < 3 ? (
+        {step < 2 ? (
           <button
             onClick={() => canProceed() && setStep(step + 1)}
             disabled={!canProceed()}
@@ -205,13 +201,14 @@ export default function EligibilityQuiz({ variant = "sidebar" }: { variant?: "si
           </button>
         ) : (
           <button
-            onClick={() => canProceed() && setSubmitted(true)}
+            onClick={() => canProceed() && setShowCalendly(true)}
             disabled={!canProceed()}
-            className={`px-3 py-1 text-[10px] font-sans font-medium transition-colors ${
+            className={`flex items-center gap-1.5 px-3 py-1 text-[10px] font-sans font-medium transition-colors ${
               canProceed() ? "bg-ink text-paper hover:bg-ink-mid" : "bg-rule text-ink-faint cursor-not-allowed"
             }`}
           >
-            Submit Assessment
+            <CalendarCheck size={11} />
+            Schedule Consultation
           </button>
         )}
       </div>
