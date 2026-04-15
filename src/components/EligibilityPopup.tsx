@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { X, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-const DELAY_MS = 25_000;
+const DELAY_MS = 15_000;
 
 export default function EligibilityPopup() {
   const [visible, setVisible] = useState(false);
