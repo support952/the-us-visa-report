@@ -1,34 +1,45 @@
 "use client";
 
+import Link from "next/link";
+
 const tickerItems = [
-  "DV-2027 Lottery Selection Results Available March 11, 2026",
-  "USCIS Fee Schedule Update — New Rates Effective January 2026",
-  "H-1B FY2026 Cap Reached in Record Time",
-  "Green Card Backlog Exceeds 1.8M Approved Petitions",
-  "State Dept. Announces Revised Visa Interview Waiver Procedures",
+  { text: "DV-2027 Diversity Visa Program: State Department Prepares for Upcoming Registration Window", href: "/news/diversity-visa-lottery-selection-opens-march-2026" },
+  { text: "DV-2027 Lottery Selection Results Available March 11, 2026", href: "/news/dv-2027-diversity-visa-lottery-registration-announced" },
+  { text: "USCIS Fee Schedule Update — New Rates Effective January 2026", href: "/news/uscis-fee-schedule-update-2026" },
+  { text: "H-1B FY2026 Cap Reached in Record Time", href: "/news/h1b-visa-cap-reached-record-time-fy2026" },
+  { text: "Green Card Backlog Exceeds 1.8M Approved Petitions", href: "/news/green-card-backlog-historic-levels-congressional-action" },
+  { text: "State Dept. Announces Revised Visa Interview Waiver Procedures", href: "/news/state-department-revises-visa-interview-waiver-2025" },
 ];
 
 export default function BreakingNewsTicker() {
   const doubled = [...tickerItems, ...tickerItems];
 
   return (
-    <div className="bg-ink overflow-hidden h-8 sm:h-7 flex items-center font-sans">
+    <div className="bg-ink overflow-hidden h-8 sm:h-7 flex items-center font-sans sticky top-0 z-[60]">
       <div className="w-full flex items-center h-full">
         <div className="flex-shrink-0 flex items-center gap-1.5 px-3 sm:px-4 h-full bg-white/5 border-r border-white/10">
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-crimson opacity-75" />
-            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-crimson" />
+          <span className="relative flex" style={{ width: 6, height: 6 }}>
+            <span
+              className="absolute inline-flex h-full w-full rounded-full"
+              style={{
+                backgroundColor: "#8b1a1a",
+                animation: "pulse-slow 2.5s ease-in-out infinite",
+              }}
+            />
+            <span className="relative inline-flex rounded-full" style={{ width: 6, height: 6, backgroundColor: "#8b1a1a" }} />
           </span>
           <span className="font-semibold uppercase tracking-[0.2em] text-white/70 text-[8px] sm:text-[9px]">
-            Bulletin
+            News Alert
           </span>
         </div>
         <div className="overflow-hidden flex-1 h-full flex items-center">
-          <div className="flex animate-ticker whitespace-nowrap">
+          <div className="flex animate-ticker whitespace-nowrap will-change-transform">
             {doubled.map((item, i) => (
-              <span key={i} className="inline-flex items-center text-[10px] sm:text-[10px] font-normal tracking-wide text-white/60">
-                <span className="px-4 sm:px-5">{item}</span>
-                <span className="text-white/20">·</span>
+              <span key={i} className="inline-flex items-center text-[10px] sm:text-[11px] font-normal tracking-wide">
+                <Link href={item.href} className="px-4 sm:px-5 text-white hover:text-white/70 transition-colors">
+                  {item.text}
+                </Link>
+                <span className="text-white/30">·</span>
               </span>
             ))}
           </div>

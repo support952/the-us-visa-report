@@ -122,11 +122,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ---- Ticker ---- */
 @keyframes ticker {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
-.animate-ticker { animation: ticker 35s linear infinite; }
+.animate-ticker {
+  animation: ticker 35s linear infinite;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
 .animate-ticker:hover { animation-play-state: paused; }
+
+/* Slow pulse for ticker dot */
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(2.2); opacity: 0; }
+}
+.animate-pulse-slow { animation: pulse-slow 2.5s ease-in-out infinite; }
 
 /* ---- Progress bar ---- */
 .reading-progress { transition: width 60ms ease-out; }
