@@ -108,7 +108,7 @@ export default function EligibilityQuiz({ variant = "sidebar" }: { variant?: "si
       {/* Title */}
       <div className="px-3 py-2 border-b border-rule flex items-center justify-between">
         <span className="text-[9px] font-sans font-semibold text-ink uppercase tracking-[0.18em]">
-          2026 Eligibility Screener
+          2027 Eligibility Screener
         </span>
         <span className="text-[8px] font-sans text-ink-muted flex items-center gap-0.5">
           <Lock size={7} strokeWidth={2} />SSL Encrypted
