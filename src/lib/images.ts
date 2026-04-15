@@ -3,7 +3,7 @@
 const slugImages: Record<string, string> = {
   // === Top articles (appear on homepage grid — all different) ===
   "diversity-visa-lottery-selection-opens-march-2026": "/images/home-photo.jpg",     // USCIS approval
-  "green-card-backlog-historic-levels-congressional-action": "/images/us-flag.jpg",   // Capitol street
+  "green-card-backlog-historic-levels-congressional-action": "/images/usa-news-map.jpg", // US flag map + newspaper
   "uscis-fee-schedule-update-2026": "/images/legal-docs.jpg",                         // Signing docs
   "dv-2027-diversity-visa-lottery-registration-announced": "/images/statue-liberty.jpg", // US flag on buildings
   // === Next group (appear in sidebar briefs or deeper) ===
