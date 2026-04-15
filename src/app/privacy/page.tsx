@@ -2,8 +2,8 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "Privacy Policy — The US Visa Report",
-  description: "Privacy policy for The US Visa Report website.",
+  title: "Privacy Policy — The US Visa News",
+  description: "Privacy policy for The US Visa News website.",
 };
 
 export default function PrivacyPage() {

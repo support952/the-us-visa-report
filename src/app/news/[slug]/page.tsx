@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const article = getArticleBySlug(slug);
   if (!article) return { title: "Article Not Found" };
   return {
-    title: `${article.title} — The US Visa Report`,
+    title: `${article.title} — The US Visa News`,
     description: article.excerpt,
     openGraph: { title: article.title, description: article.excerpt, type: "article", publishedTime: article.publishedDate, authors: [article.author.name] },
   };
@@ -70,22 +70,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
         {/* Header */}
         <header className="bg-white border-b border-rule">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-14">
             <div className="max-w-3xl">
               <span className="text-[9px] font-sans font-semibold text-crimson-text uppercase tracking-[0.2em]">
                 {article.category}
                 {article.isBreaking && <span className="ml-2 px-2 py-0.5 bg-crimson text-paper text-[8px] tracking-wider">Breaking</span>}
               </span>
-              <h1 className="font-serif text-2xl md:text-[2.2rem] font-bold text-ink mt-3 leading-[1.12] tracking-tight">
+              <h1 className="font-serif text-xl sm:text-2xl md:text-[2.2rem] font-bold text-ink mt-3 leading-[1.12] tracking-tight">
                 {article.title}
               </h1>
-              <p className="text-[15px] font-sans text-ink-soft mt-4 leading-relaxed font-light">{article.excerpt}</p>
+              <p className="text-[13px] sm:text-[15px] font-sans text-ink-soft mt-3 sm:mt-4 leading-relaxed font-light">{article.excerpt}</p>
 
               {/* Editorial metadata */}
-              <div className="mt-8 pt-5 border-t border-rule space-y-3">
-                <div className="flex flex-wrap items-center gap-4">
+              <div className="mt-5 sm:mt-8 pt-4 sm:pt-5 border-t border-rule space-y-3">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-paper-warm border border-rule flex items-center justify-center">
+                    <div className="w-8 h-8 bg-paper-warm border border-rule flex items-center justify-center rounded-full">
                       <User size={14} strokeWidth={1.5} className="text-ink-faint" />
                     </div>
                     <div>
@@ -94,10 +94,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                     </div>
                   </div>
                   <div className="flex items-center gap-3 text-[10px] font-sans text-ink-muted">
-                    <span className="flex items-center gap-0.5"><Calendar size={10} strokeWidth={1.5} />{formatDate(article.publishedDate)}</span>
-                    <span className="flex items-center gap-0.5"><Clock size={10} strokeWidth={1.5} />{article.readTime} min read</span>
+                    <span className="flex items-center gap-1"><Calendar size={10} strokeWidth={1.5} />{formatDate(article.publishedDate)}</span>
+                    <span className="flex items-center gap-1"><Clock size={10} strokeWidth={1.5} />{article.readTime} min read</span>
                   </div>
-                  <div className="ml-auto"><SocialShare title={article.title} /></div>
+                  <div className="sm:ml-auto"><SocialShare title={article.title} /></div>
                 </div>
                 <div className="flex flex-wrap gap-x-4 gap-y-0.5 text-[9px] font-sans text-ink-faint">
                   <span>Reported by {article.author.name}</span>
@@ -110,8 +110,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         </header>
 
         {/* Featured Image */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
-          <div className="relative aspect-[21/9] max-w-3xl overflow-hidden border border-rule">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 lg:pt-10">
+          <div className="relative aspect-[16/9] sm:aspect-[21/9] max-w-3xl overflow-hidden border border-rule">
             <Image
               src={getImageForSlug(article.slug)}
               alt={article.title}
@@ -124,8 +124,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         </div>
 
         {/* Body */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 lg:gap-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-14">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20">
             <div className="lg:col-span-2">
               <KeyTakeaways takeaways={takeaways} />
               <ArticleRenderer content={article.content} topic={article.category} />

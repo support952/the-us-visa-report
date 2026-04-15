@@ -2,8 +2,8 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "About Us — The US Visa Report",
-  description: "About The US Visa Report — independent immigration policy analysis and news coverage since 2019.",
+  title: "About Us — The US Visa News",
+  description: "About The US Visa News — independent immigration policy analysis and news coverage since 2019.",
 };
 
 export default function AboutPage() {
@@ -31,7 +31,7 @@ export default function AboutPage() {
         <div className="max-w-2xl space-y-6 text-[14px] font-sans text-ink-soft leading-[1.85]">
           <h2 className="font-serif text-lg font-bold text-ink">Our Mission</h2>
           <p>
-            The US Visa Report is an independent publication dedicated to providing accurate, timely,
+            The US Visa News is an independent publication dedicated to providing accurate, timely,
             and comprehensive analysis of U.S. immigration policy, visa programs, and administrative
             developments. Founded in 2019, we serve as a trusted resource for applicants, legal
             professionals, and policy analysts worldwide.
@@ -55,7 +55,7 @@ export default function AboutPage() {
 
           <h2 className="font-serif text-lg font-bold text-ink pt-4">Editorial Independence</h2>
           <p>
-            The US Visa Report maintains complete editorial independence. Our coverage is not influenced
+            The US Visa News maintains complete editorial independence. Our coverage is not influenced
             by any government agency, law firm, or advocacy organization. We adhere to established
             journalistic standards and correct errors promptly when identified.
           </p>
@@ -68,8 +68,12 @@ export default function AboutPage() {
             </Link>.
           </p>
 
-          <div className="mt-8 pt-6 border-t border-rule text-[10px] text-ink-faint">
-            <p>ISSN 2836-4172 (Online) &middot; Published from Washington, D.C.</p>
+          <div className="mt-8 pt-6 border-t border-rule text-center">
+            <p className="text-[12px] font-sans text-ink-soft mb-4">Interested in exploring your immigration options?</p>
+            <Link href="/assessment" className="inline-flex items-center gap-2 px-5 py-1.5 border border-ink text-ink text-[10px] font-sans font-semibold uppercase tracking-[0.15em] hover:bg-ink hover:text-paper transition-colors">
+              Check Eligibility
+            </Link>
+            <p className="text-[10px] text-ink-faint mt-6">ISSN 2836-4172 (Online) &middot; Published from Washington, D.C.</p>
           </div>
         </div>
       </div>

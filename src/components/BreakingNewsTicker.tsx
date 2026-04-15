@@ -12,7 +12,7 @@ export default function BreakingNewsTicker() {
   const doubled = [...tickerItems, ...tickerItems];
 
   return (
-    <div className="bg-ink text-ink-faint overflow-hidden h-6 flex items-center text-[10px] font-sans">
+    <div className="bg-ink text-ink-faint overflow-hidden h-7 sm:h-6 flex items-center text-[10px] font-sans">
       <div className="max-w-7xl mx-auto w-full flex items-center">
         <span className="flex-shrink-0 px-3 font-semibold uppercase tracking-[0.2em] text-crimson-text text-[9px]">
           Bulletin

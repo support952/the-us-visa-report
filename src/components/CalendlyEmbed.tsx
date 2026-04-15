@@ -7,11 +7,17 @@ const CALENDLY_URL =
 
 export function CalendlyFull() {
   useEffect(() => {
+    const link = document.createElement("link");
+    link.href = "https://assets.calendly.com/assets/external/widget.css";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
     script.async = true;
     document.body.appendChild(script);
     return () => {
+      document.head.removeChild(link);
       document.body.removeChild(script);
     };
   }, []);
@@ -27,11 +33,17 @@ export function CalendlyFull() {
 
 export function CalendlySidebar() {
   useEffect(() => {
+    const link = document.createElement("link");
+    link.href = "https://assets.calendly.com/assets/external/widget.css";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
     script.async = true;
     document.body.appendChild(script);
     return () => {
+      document.head.removeChild(link);
       document.body.removeChild(script);
     };
   }, []);

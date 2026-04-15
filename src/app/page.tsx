@@ -17,14 +17,14 @@ export default function HomePage() {
   const featured = getFeaturedArticle();
   const latest = getLatestArticles(7);
   const topBriefs = latest.filter((a) => a.slug !== featured?.slug).slice(0, 4);
-  const gridArticles = latest.slice(0, 4);
+  const gridArticles = latest.filter((a) => a.slug !== featured?.slug).slice(0, 4);
 
   return (
     <div className="bg-paper">
       {/* ── HERO ── */}
       <section className="bg-white border-b border-rule">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-14">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12">
             <div className="lg:col-span-3">
               {featured && <ArticleCardLarge article={featured} />}
             </div>
@@ -40,9 +40,22 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Mobile CTA — visible only on small screens ── */}
+      <div className="lg:hidden border-b border-rule">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+          <span className="text-[11px] font-sans text-ink-muted">Exploring your immigration options?</span>
+          <Link
+            href="/assessment"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 border border-rule text-ink text-[10px] font-sans font-medium uppercase tracking-[0.12em] active:bg-paper-warm transition-colors"
+          >
+            Check Eligibility<ArrowRight size={10} strokeWidth={1.5} />
+          </Link>
+        </div>
+      </div>
+
       {/* ── MAIN ── */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 lg:gap-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20">
           {/* Left */}
           <div className="lg:col-span-2 space-y-16">
             <div>

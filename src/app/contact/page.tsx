@@ -3,8 +3,8 @@ import { ChevronRight, Mail, MapPin } from "lucide-react";
 import { CalendlyFull } from "@/components/CalendlyEmbed";
 
 export const metadata = {
-  title: "Contact — The US Visa Report",
-  description: "Contact The US Visa Report editorial team or schedule a consultation with an immigration expert.",
+  title: "Contact — The US Visa News",
+  description: "Contact The US Visa News editorial team or schedule a consultation with an immigration expert.",
 };
 
 export default function ContactPage() {

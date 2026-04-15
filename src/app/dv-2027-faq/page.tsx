@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata = {
-  title: "DV-2027 Diversity Visa Lottery FAQ — The US Visa Report",
+  title: "DV-2027 Diversity Visa Lottery FAQ — The US Visa News",
   description: "Comprehensive FAQ for the DV-2027 Green Card Lottery program. Registration dates, new passport requirements, eligibility, and official guidance.",
 };
 
@@ -177,26 +177,13 @@ export default function FAQPage() {
             </div>
           ))}
 
-          {/* Scam alert */}
-          <div className="bg-crimson/5 border border-crimson/20 p-5">
-            <h3 className="text-[10px] font-sans font-semibold text-crimson uppercase tracking-[0.15em] mb-2">
-              Scam Alert
-            </h3>
-            <p className="text-[12px] font-sans text-ink-soft leading-relaxed">
-              There is only one official website: <strong>dvprogram.state.gov</strong>. The Department
-              of State never sends emails or letters notifying individuals of their selection.
-              You must check your status manually using your confirmation number. Any
-              communication requesting payment or personal information should be reported immediately.
-            </p>
-          </div>
-
           {/* CTA */}
           <div className="border-t border-b border-rule py-8 text-center">
             <p className="text-[12px] font-sans text-ink-soft mb-4">
               Need personalized guidance on your DV-2027 application?
             </p>
             <Link href="/assessment" className="inline-flex items-center gap-2 px-5 py-1.5 border border-ink text-ink text-[10px] font-sans font-semibold uppercase tracking-[0.15em] hover:bg-ink hover:text-paper transition-colors">
-              Begin Eligibility Assessment
+              Check Eligibility
             </Link>
           </div>
 

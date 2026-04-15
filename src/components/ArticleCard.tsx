@@ -22,7 +22,7 @@ export function ArticleCardLarge({ article }: { article: Article }) {
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
-        <div className="p-6 md:p-8 lg:p-10 flex flex-col justify-center">
+        <div className="p-5 sm:p-6 md:p-8 lg:p-10 flex flex-col justify-center">
           {article.isBreaking && (
             <span className="inline-block self-start bg-crimson text-white text-[9px] font-sans font-semibold uppercase tracking-[0.18em] px-2.5 py-0.5 mb-3">
               Breaking
@@ -31,7 +31,7 @@ export function ArticleCardLarge({ article }: { article: Article }) {
           <span className="text-[9px] font-sans font-semibold text-crimson-text uppercase tracking-[0.25em]">
             {article.category}
           </span>
-          <h2 className="font-serif text-xl md:text-2xl lg:text-[1.75rem] font-bold text-ink mt-2 leading-[1.15] tracking-tight group-hover:text-ink-soft transition-colors">
+          <h2 className="font-serif text-lg sm:text-xl md:text-2xl lg:text-[1.75rem] font-bold text-ink mt-2 leading-[1.15] tracking-tight group-hover:text-ink-soft transition-colors">
             {article.title}
           </h2>
           <p className="text-[13px] text-ink-soft mt-3 leading-relaxed font-sans font-light line-clamp-3">

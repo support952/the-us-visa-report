@@ -2,7 +2,7 @@ import { CalendlyFull } from "@/components/CalendlyEmbed";
 import { Shield, CheckCircle, Users, Clock } from "lucide-react";
 
 export const metadata = {
-  title: "Schedule Consultation — The US Visa Report",
+  title: "Schedule Consultation — The US Visa News",
   description:
     "Book a free consultation call with a senior immigration expert. Get personalized guidance on the Diversity Visa Lottery, employment-based visas, and more.",
 };

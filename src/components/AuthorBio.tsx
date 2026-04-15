@@ -1,4 +1,4 @@
-import { User, Link as LinkIcon, Mail } from "lucide-react";
+import { Link as LinkIcon, Mail } from "lucide-react";
 import type { Author } from "@/lib/articles";
 
 const authorBios: Record<string, string> = {
@@ -8,14 +8,26 @@ const authorBios: Record<string, string> = {
   "Michael Chen": "Consular Affairs Analyst specializing in visa processing and global mobility. Former policy advisor, International Organization for Migration. M.P.A., Columbia SIPA.",
 };
 
+const authorColors: Record<string, string> = {
+  "Sarah Mitchell": "bg-blue-800",
+  "James Thornton": "bg-emerald-800",
+  "Elena Rodriguez": "bg-purple-800",
+  "Michael Chen": "bg-amber-800",
+};
+
+function getInitials(name: string) {
+  return name.split(" ").map((n) => n[0]).join("").toUpperCase();
+}
+
 export default function AuthorBio({ author }: { author: Author }) {
-  const bio = authorBios[author.name] || `${author.role} at The US Visa Report.`;
+  const bio = authorBios[author.name] || `${author.role} at The US Visa News.`;
+  const color = authorColors[author.name] || "bg-ink";
 
   return (
     <div className="border-t border-ink mt-12 pt-6">
       <div className="flex items-start gap-4">
-        <div className="w-12 h-12 bg-paper-warm border border-rule flex items-center justify-center flex-shrink-0">
-          <User size={20} strokeWidth={1.5} className="text-ink-faint" />
+        <div className={`w-12 h-12 ${color} flex items-center justify-center flex-shrink-0 rounded-full`}>
+          <span className="text-white font-serif text-sm font-bold">{getInitials(author.name)}</span>
         </div>
         <div>
           <p className="text-[8px] font-sans text-ink-muted uppercase tracking-[0.25em]">About the Author</p>

@@ -7,7 +7,6 @@ import {
   Briefcase,
   ChevronRight,
   ChevronLeft,
-  Lock,
   CalendarCheck,
 } from "lucide-react";
 
@@ -108,10 +107,10 @@ export default function EligibilityQuiz({ variant = "sidebar" }: { variant?: "si
       {/* Title */}
       <div className="px-3 py-2 border-b border-rule flex items-center justify-between">
         <span className="text-[9px] font-sans font-semibold text-ink uppercase tracking-[0.18em]">
-          2027 Eligibility Screener
+          Check Your Eligibility
         </span>
-        <span className="text-[8px] font-sans text-ink-muted flex items-center gap-0.5">
-          <Lock size={7} strokeWidth={2} />SSL Encrypted
+        <span className="text-[8px] font-sans text-ink-muted">
+          DV-2027
         </span>
       </div>
 
@@ -137,7 +136,7 @@ export default function EligibilityQuiz({ variant = "sidebar" }: { variant?: "si
           <select
             value={formData.country}
             onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-            className="w-full px-2.5 py-2 border border-rule bg-white text-[11px] font-sans text-ink focus:outline-none focus:border-ink-muted"
+            className="w-full px-2.5 py-2.5 sm:py-2 border border-rule bg-white text-[13px] sm:text-[11px] font-sans text-ink focus:outline-none focus:border-ink-muted"
           >
             <option value="">— Select —</option>
             {countries.map((c) => <option key={c} value={c}>{c}</option>)}
@@ -213,11 +212,10 @@ export default function EligibilityQuiz({ variant = "sidebar" }: { variant?: "si
         )}
       </div>
 
-      {/* Security notice */}
+      {/* Notice */}
       <div className="px-3 py-1.5 border-t border-rule bg-steel-light/50">
         <p className="text-[8px] font-sans text-ink-muted leading-relaxed">
-          Data encrypted via SSL. Information used solely for preliminary policy analysis.
-          Not shared with third parties. See Privacy Policy.
+          Free preliminary assessment. Your information is kept private.
         </p>
       </div>
     </div>

@@ -28,7 +28,7 @@ export function NewsletterInline() {
         Recent regulatory updates may impact your immigration pathway. Our analysts provide complimentary preliminary assessments.
       </p>
       <Link href="/assessment" className="inline-flex items-center gap-2 mt-5 px-5 py-1.5 border border-ink text-ink text-[10px] font-sans font-semibold uppercase tracking-[0.15em] hover:bg-ink hover:text-paper transition-colors">
-        Begin Assessment<ArrowRight size={11} strokeWidth={1.5} />
+        Check Eligibility<ArrowRight size={11} strokeWidth={1.5} />
       </Link>
     </div>
   );

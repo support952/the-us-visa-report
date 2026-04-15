@@ -4,8 +4,8 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "Article Archive — The US Visa Report",
-  description: "Complete archive of immigration policy analysis, DV Lottery updates, and visa program coverage from The US Visa Report.",
+  title: "Article Archive — The US Visa News",
+  description: "Complete archive of immigration policy analysis, DV Lottery updates, and visa program coverage from The US Visa News.",
 };
 
 export default function ArchivePage() {

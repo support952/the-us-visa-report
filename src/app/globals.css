@@ -147,3 +147,20 @@ html { scroll-behavior: smooth; }
 .card-elevated {
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.03);
 }
+
+/* ---- Mobile touch improvements ---- */
+@media (max-width: 640px) {
+  .article-content h2 { font-size: 1.15rem; margin-top: 2rem; }
+  .article-content p { font-size: 0.9375rem; line-height: 1.8; }
+  .article-content li { font-size: 0.9375rem; }
+}
+
+/* Prevent iOS zoom on input focus */
+@media (max-width: 768px) {
+  input, select, textarea { font-size: 16px !important; }
+}
+
+/* Smooth tap highlight */
+@media (hover: none) {
+  a, button { -webkit-tap-highlight-color: rgba(0, 0, 0, 0.05); }
+}

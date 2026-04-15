@@ -2,8 +2,8 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "Editorial Policy — The US Visa Report",
-  description: "Editorial standards, corrections policy, and journalistic guidelines of The US Visa Report.",
+  title: "Editorial Policy — The US Visa News",
+  description: "Editorial standards, corrections policy, and journalistic guidelines of The US Visa News.",
 };
 
 export default function EditorialPolicyPage() {
@@ -32,7 +32,7 @@ export default function EditorialPolicyPage() {
         <div className="max-w-2xl space-y-6 text-[14px] font-sans text-ink-soft leading-[1.85]">
           <h2 className="font-serif text-lg font-bold text-ink">Standards of Accuracy</h2>
           <p>
-            The US Visa Report is committed to factual accuracy in all published content. Our reporters
+            The US Visa News is committed to factual accuracy in all published content. Our reporters
             verify information through official government sources, including the U.S. Department of State,
             U.S. Citizenship and Immigration Services (USCIS), and the Department of Homeland Security,
             before publication. When official sources are unavailable, we rely on credentialed legal
@@ -66,7 +66,7 @@ export default function EditorialPolicyPage() {
 
           <h2 className="font-serif text-lg font-bold text-ink pt-4">Legal Disclaimer</h2>
           <p>
-            Content published by The US Visa Report is for informational purposes only and does not
+            Content published by The US Visa News is for informational purposes only and does not
             constitute legal advice. Immigration law is complex and fact-specific. Readers should
             consult with a qualified immigration attorney licensed in the appropriate jurisdiction
             before taking any action based on information published on this site.

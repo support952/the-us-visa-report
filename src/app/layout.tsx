@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "The US Visa Report — Immigration Policy Insights & Analysis",
+  title: "The US Visa News — Immigration Policy Insights & Analysis",
   description:
     "Independent coverage of U.S. immigration policy, visa programs, and the Diversity Visa Lottery. Trusted analysis since 2019.",
   keywords:

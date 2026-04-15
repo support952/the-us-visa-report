@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ChevronRight, CheckCircle, AlertTriangle } from "lucide-react";
 
 export const metadata = {
-  title: "DV-2027 Passport Scan Guide — The US Visa Report",
+  title: "DV-2027 Passport Scan Guide — The US Visa News",
   description: "Technical specifications and step-by-step instructions for preparing your passport scan for the DV-2027 Diversity Visa Lottery entry.",
 };
 
@@ -159,7 +159,7 @@ export default function PassportGuidePage() {
           <div className="border-t border-b border-rule py-8 text-center">
             <p className="text-[12px] font-sans text-ink-soft mb-4">Need help ensuring your application meets all technical requirements?</p>
             <Link href="/assessment" className="inline-flex items-center gap-2 px-5 py-1.5 border border-ink text-ink text-[10px] font-sans font-semibold uppercase tracking-[0.15em] hover:bg-ink hover:text-paper transition-colors">
-              Begin Eligibility Assessment
+              Check Eligibility
             </Link>
           </div>
 

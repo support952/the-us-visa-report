@@ -1,7 +1,7 @@
 import { getAllArticles } from "@/lib/articles";
 import { ArticleCardGrid } from "@/components/ArticleCard";
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 import { notFound } from "next/navigation";
 
 const categoryMap: Record<string, string> = {
@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const label = categoryMap[slug];
   if (!label) return {};
   return {
-    title: `${label} — The US Visa Report`,
-    description: `${label} articles and coverage from The US Visa Report.`,
+    title: `${label} — The US Visa News`,
+    description: `${label} articles and coverage from The US Visa News.`,
   };
 }
 
@@ -67,6 +67,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             No articles in this category yet.
           </p>
         )}
+
+        <div className="border-t border-rule mt-12 pt-8 text-center">
+          <p className="text-[12px] font-sans text-ink-soft mb-4">Interested in exploring your immigration options?</p>
+          <Link href="/assessment" className="inline-flex items-center gap-2 px-5 py-1.5 border border-ink text-ink text-[10px] font-sans font-semibold uppercase tracking-[0.15em] hover:bg-ink hover:text-paper transition-colors">
+            Check Eligibility<ArrowRight size={11} strokeWidth={1.5} />
+          </Link>
+        </div>
       </div>
     </div>
   );
