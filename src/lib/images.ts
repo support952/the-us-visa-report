@@ -2,10 +2,10 @@
 // Ordered so that articles appearing together on the homepage never repeat
 const slugImages: Record<string, string> = {
   // === Top articles (appear on homepage grid — all different) ===
-  "diversity-visa-lottery-selection-opens-march-2026": "/images/home-photo.jpg",     // USCIS approval
+  "diversity-visa-lottery-selection-opens-march-2026": "/images/dv2027-passports.jpg", // Passports + Green Card
   "green-card-backlog-historic-levels-congressional-action": "/images/usa-news-map.jpg", // US flag map + newspaper
-  "uscis-fee-schedule-update-2026": "/images/legal-docs.jpg",                         // Signing docs
-  "dv-2027-diversity-visa-lottery-registration-announced": "/images/statue-liberty.jpg", // US flag on buildings
+  "uscis-fee-schedule-update-2026": "/images/uscis-fees.jpg",                          // USCIS form + dollars
+  "dv-2027-diversity-visa-lottery-registration-announced": "/images/state-dept-letter.jpg", // State Dept official letter
   // === Next group (appear in sidebar briefs or deeper) ===
   "uscis-updates-processing-times-employment-green-cards": "/images/passport-visa.jpg", // Laptop
   "dv-2026-lottery-results-analysis-selection-rates": "/images/courtroom.jpg",         // Gov columns

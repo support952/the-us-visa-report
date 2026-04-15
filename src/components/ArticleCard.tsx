@@ -14,7 +14,7 @@ export function ArticleCardLarge({ article }: { article: Article }) {
       <div className="grid grid-cols-1 md:grid-cols-2 bg-white border border-rule overflow-hidden">
         <div className="relative aspect-[4/3] md:aspect-auto">
           <Image
-            src="/images/home-photo.jpg"
+            src="/images/dv2027-passports.jpg"
             alt={article.title}
             fill
             className="object-cover"
