@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Rss, Mail } from "lucide-react";
+import { LogoIconDark } from "./Logo";
 
 const footerLinks = {
   "News & Analysis": [
@@ -47,7 +48,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <span className="font-serif text-white font-bold text-sm">The US Visa Report</span>
+            <div className="flex items-center gap-2">
+              <LogoIconDark size={24} />
+              <span className="font-serif text-white font-bold text-sm">The US Visa Report</span>
+            </div>
             <p className="text-[10px] font-sans text-white/25 leading-relaxed mt-2">
               Independent immigration policy analysis since 2019.
             </p>

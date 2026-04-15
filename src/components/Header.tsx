@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Search, Menu, X } from "lucide-react";
 import SearchModal from "./SearchModal";
+import { LogoIcon } from "./Logo";
 
 const navigation = [
   { name: "Latest News", href: "/" },
@@ -26,8 +27,9 @@ export default function Header() {
             <h1 className="font-serif text-[28px] md:text-[36px] font-bold text-ink tracking-tight leading-none">
               The US Visa Report
             </h1>
-            <div className="flex items-center justify-center gap-3 mt-1.5">
+            <div className="flex items-center justify-center gap-3 mt-2.5">
               <span className="w-8 h-px bg-rule" />
+              <LogoIcon size={18} />
               <span className="text-[8px] font-sans font-semibold text-ink-muted uppercase tracking-[0.35em]">
                 Founded 2019 &nbsp;&middot;&nbsp; Independent Policy Analysis
               </span>
@@ -74,8 +76,9 @@ export default function Header() {
 
               {/* Mobile */}
               <div className="flex items-center gap-2 lg:hidden w-full justify-between">
-                <Link href="/" className="font-serif text-sm font-bold text-ink">
-                  USVR
+                <Link href="/" className="flex items-center gap-1.5">
+                  <LogoIcon size={22} />
+                  <span className="font-serif text-sm font-bold text-ink">USVR</span>
                 </Link>
                 <div className="flex items-center gap-1">
                   <button onClick={() => setSearchOpen(true)} className="p-2 text-ink-muted" aria-label="Search">
