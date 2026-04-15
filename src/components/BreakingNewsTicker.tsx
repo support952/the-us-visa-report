@@ -12,17 +12,23 @@ export default function BreakingNewsTicker() {
   const doubled = [...tickerItems, ...tickerItems];
 
   return (
-    <div className="bg-ink text-ink-faint overflow-hidden h-7 sm:h-6 flex items-center text-[10px] font-sans">
-      <div className="max-w-7xl mx-auto w-full flex items-center">
-        <span className="flex-shrink-0 px-3 font-semibold uppercase tracking-[0.2em] text-crimson-text text-[9px]">
-          Bulletin
-        </span>
-        <span className="w-px h-2.5 bg-white/10 flex-shrink-0" />
-        <div className="overflow-hidden flex-1">
+    <div className="bg-ink overflow-hidden h-8 sm:h-7 flex items-center font-sans">
+      <div className="w-full flex items-center h-full">
+        <div className="flex-shrink-0 flex items-center gap-1.5 px-3 sm:px-4 h-full bg-white/5 border-r border-white/10">
+          <span className="relative flex h-1.5 w-1.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-crimson opacity-75" />
+            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-crimson" />
+          </span>
+          <span className="font-semibold uppercase tracking-[0.2em] text-white/70 text-[8px] sm:text-[9px]">
+            Bulletin
+          </span>
+        </div>
+        <div className="overflow-hidden flex-1 h-full flex items-center">
           <div className="flex animate-ticker whitespace-nowrap">
             {doubled.map((item, i) => (
-              <span key={i} className="inline-block px-6 text-[10px] font-light tracking-wide text-white/50">
-                {item}
+              <span key={i} className="inline-flex items-center text-[10px] sm:text-[10px] font-normal tracking-wide text-white/60">
+                <span className="px-4 sm:px-5">{item}</span>
+                <span className="text-white/20">·</span>
               </span>
             ))}
           </div>
