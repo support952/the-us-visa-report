@@ -23,6 +23,17 @@ export const metadata: Metadata = {
     "Independent coverage of U.S. immigration policy, visa programs, and the Diversity Visa Lottery. Trusted analysis since 2019.",
   keywords:
     "US immigration, diversity visa, green card lottery, DV lottery, H-1B visa, immigration policy, visa bulletin",
+  openGraph: {
+    title: "The US Visa News",
+    description: "Independent coverage of U.S. immigration policy, visa programs, and the Diversity Visa Lottery.",
+    siteName: "The US Visa News",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The US Visa News",
+    description: "Independent coverage of U.S. immigration policy, visa programs, and the Diversity Visa Lottery.",
+  },
 };
 
 export default function RootLayout({
