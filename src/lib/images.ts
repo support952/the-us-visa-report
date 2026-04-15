@@ -5,11 +5,11 @@ const slugImages: Record<string, string> = {
   "diversity-visa-lottery-selection-opens-march-2026": "/images/home-photo.jpg",     // USCIS approval
   "green-card-backlog-historic-levels-congressional-action": "/images/us-flag.jpg",   // Capitol street
   "uscis-fee-schedule-update-2026": "/images/legal-docs.jpg",                         // Signing docs
-  "dv-2027-diversity-visa-lottery-registration-announced": "/images/american-flag2.jpg", // Washington Monument
+  "dv-2027-diversity-visa-lottery-registration-announced": "/images/statue-liberty.jpg", // US flag on buildings
   // === Next group (appear in sidebar briefs or deeper) ===
   "uscis-updates-processing-times-employment-green-cards": "/images/passport-visa.jpg", // Laptop
   "dv-2026-lottery-results-analysis-selection-rates": "/images/courtroom.jpg",         // Gov columns
-  "h1b-visa-cap-reached-record-time-fy2026": "/images/statue-liberty.jpg",            // US flag on building
+  "h1b-visa-cap-reached-record-time-fy2026": "/images/passport-money.jpg",            // Passport on world map
   "federal-court-ruling-daca-permanent-residency": "/images/flag-closeup.jpg",        // Gavel
   // === Older articles ===
   "immigration-policy-shifts-2025-executive-orders": "/images/us-flag.jpg",
