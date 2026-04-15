@@ -21,13 +21,13 @@ export default function HomePage() {
   const gridArticles = latest.filter((a) => a.slug !== featured?.slug).slice(0, 4);
 
   return (
-    <div className="bg-paper">
-      {/* ── HERO — WashPost style ── */}
-      <section className="bg-white border-b border-rule">
+    <div>
+      {/* ── HERO — white ── */}
+      <section className="border-b border-rule" style={{ background: "#ffffff" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
           {featured && <ArticleCardLarge article={featured} />}
 
-          {/* Secondary headlines below hero — text only, like WashPost */}
+          {/* Secondary headlines */}
           <div className="mt-6 lg:mt-8 pt-6 border-t border-rule grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4">
             {topBriefs.map((article) => (
               <Link key={article.slug} href={`/news/${article.slug}`} className="group block">
@@ -43,8 +43,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Mobile CTA — visible only on small screens ── */}
-      <div className="lg:hidden border-b border-rule">
+      {/* ── Mobile CTA ── */}
+      <div className="lg:hidden border-b border-rule" style={{ background: "#f4f3f0" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
           <span className="text-[11px] font-sans text-ink-muted">Exploring your immigration options?</span>
           <Link
@@ -56,35 +56,39 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── MAIN ── */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20">
-          {/* Left */}
-          <div className="lg:col-span-2 space-y-16">
-            <div>
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-[9px] font-sans font-semibold text-ink uppercase tracking-[0.25em] pb-2.5 border-b-2 border-ink">
-                  Latest Reports
-                </h2>
-                <Link href="/archive" className="text-[10px] font-sans text-ink-muted hover:text-ink transition-colors flex items-center gap-1">
-                  All articles<ArrowRight size={10} strokeWidth={1.5} />
-                </Link>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {gridArticles.map((a) => (
-                  <ArticleCardGrid key={a.slug} article={a} />
-                ))}
-              </div>
-            </div>
-
-            <NewsletterInline />
+      {/* ── LATEST REPORTS — warm cream ── */}
+      <section style={{ background: "#f9f9f7" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-[9px] font-sans font-semibold text-ink uppercase tracking-[0.25em] pb-2.5 border-b-2 border-ink">
+              Latest Reports
+            </h2>
+            <Link href="/archive" className="text-[10px] font-sans text-ink-muted hover:text-ink transition-colors flex items-center gap-1">
+              All articles<ArrowRight size={10} strokeWidth={1.5} />
+            </Link>
           </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {gridArticles.map((a) => (
+              <ArticleCardGrid key={a.slug} article={a} />
+            ))}
+          </div>
+        </div>
+      </section>
 
-          {/* Right — sidebar */}
-          <aside className="space-y-6">
+      {/* ── NEWSLETTER — white ── */}
+      <section style={{ background: "#ffffff" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
+          <NewsletterInline />
+        </div>
+      </section>
+
+      {/* ── SIDEBAR WIDGETS — warm ── */}
+      <section style={{ background: "#f4f3f0" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <VisaSuccessTracker />
             <EligibilityQuiz />
-          </aside>
+          </div>
         </div>
       </section>
     </div>

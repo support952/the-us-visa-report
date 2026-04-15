@@ -124,45 +124,48 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           </div>
         </header>
 
-        {/* Body */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-14">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-14">
-            <div className="lg:col-span-2">
-              <KeyTakeaways takeaways={takeaways} />
-              <ArticleRenderer content={article.content} topic={article.category} />
+        {/* Body — cream background */}
+        <div style={{ background: "#f9f9f7" }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-14">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-14">
+              <div className="lg:col-span-2">
+                <KeyTakeaways takeaways={takeaways} />
+                <ArticleRenderer content={article.content} topic={article.category} />
 
-              <div className="mt-12 p-4 bg-paper-warm border border-rule text-[10px] font-sans text-ink-muted leading-relaxed">
-                <strong className="text-ink text-[9px] uppercase tracking-[0.15em] block mb-1">Policy Accuracy Disclaimer</strong>
-                This article reflects policy conditions as of the publication date. Immigration law is subject to change. Verify all information with official sources and consult a qualified attorney before acting.
-              </div>
-              <AuthorBio author={article.author} />
-            </div>
-
-            <aside className="space-y-6">
-              <VisaSuccessTracker />
-              <EligibilityQuiz />
-              {related.length > 0 && (
-                <div className="bg-white border border-rule">
-                  <div className="px-3 py-2 border-b border-rule">
-                    <span className="text-[9px] font-sans font-semibold text-ink uppercase tracking-[0.18em]">Related</span>
-                  </div>
-                  <div className="p-3 space-y-3">
-                    {related.map((a) => (
-                      <Link key={a.slug} href={`/news/${a.slug}`} className="block group">
-                        <span className="text-[8px] font-sans font-semibold text-crimson-text uppercase tracking-[0.2em]">{a.category}</span>
-                        <h4 className="font-sans text-[11px] font-medium text-ink group-hover:text-ink-soft transition-colors leading-snug mt-0.5 line-clamp-2">{a.title}</h4>
-                        <p className="text-[9px] font-sans text-ink-muted mt-0.5">{formatDate(a.publishedDate)}</p>
-                      </Link>
-                    ))}
-                  </div>
+                <div className="mt-12 p-4 bg-paper-warm border border-rule text-[10px] font-sans text-ink-muted leading-relaxed">
+                  <strong className="text-ink text-[9px] uppercase tracking-[0.15em] block mb-1">Policy Accuracy Disclaimer</strong>
+                  This article reflects policy conditions as of the publication date. Immigration law is subject to change. Verify all information with official sources and consult a qualified attorney before acting.
                 </div>
-              )}
-            </aside>
+                <AuthorBio author={article.author} />
+              </div>
+
+              <aside className="space-y-6">
+                <VisaSuccessTracker />
+                <EligibilityQuiz />
+                {related.length > 0 && (
+                  <div className="bg-white border border-rule">
+                    <div className="px-3 py-2 border-b border-rule">
+                      <span className="text-[9px] font-sans font-semibold text-ink uppercase tracking-[0.18em]">Related</span>
+                    </div>
+                    <div className="p-3 space-y-3">
+                      {related.map((a) => (
+                        <Link key={a.slug} href={`/news/${a.slug}`} className="block group">
+                          <span className="text-[8px] font-sans font-semibold text-crimson-text uppercase tracking-[0.2em]">{a.category}</span>
+                          <h4 className="font-sans text-[11px] font-medium text-ink group-hover:text-ink-soft transition-colors leading-snug mt-0.5 line-clamp-2">{a.title}</h4>
+                          <p className="text-[9px] font-sans text-ink-muted mt-0.5">{formatDate(a.publishedDate)}</p>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </aside>
+            </div>
           </div>
         </div>
 
+        {/* Related articles — white */}
         {related.length > 0 && (
-          <section className="bg-white border-t border-rule py-14">
+          <section style={{ background: "#ffffff" }} className="border-t border-rule py-14">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-[9px] font-sans font-semibold text-ink uppercase tracking-[0.25em] pb-2.5 border-b-2 border-ink mb-8 inline-block">
                 More from {article.category}
@@ -174,8 +177,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           </section>
         )}
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BackButton />
+        {/* Back — warm */}
+        <div style={{ background: "#f4f3f0" }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <BackButton />
+          </div>
         </div>
       </article>
     </>

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const tickerItems = [
   { text: "DV-2027 Green Card Lottery: New Passport Rule, $1 Fee, and Registration Updates", href: "/news/diversity-visa-lottery-selection-opens-march-2026" },
-  { text: "DV-2027 Registration Period Opens October 2025 — Apply Now", href: "/news/dv-2027-diversity-visa-lottery-registration-announced" },
+  { text: "DV-2027 Registration Delayed — Expected to Open Late April 2026", href: "/news/dv-2027-diversity-visa-lottery-registration-announced" },
   { text: "USCIS Fee Schedule Update — New Rates Effective January 2026", href: "/news/uscis-fee-schedule-update-2026" },
   { text: "H-1B Visa Cap Reached in Record Time for FY2026", href: "/news/h1b-visa-cap-reached-record-time-fy2026" },
   { text: "Green Card Backlog Reaches Historic Levels — 1.8M Petitions Waiting", href: "/news/green-card-backlog-historic-levels-congressional-action" },
