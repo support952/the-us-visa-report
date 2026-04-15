@@ -1,10 +1,11 @@
 "use client";
 
+import React from "react";
 import ContextualCTA from "./ContextualCTA";
 
-function renderMarkdown(content: string, topic: string): JSX.Element[] {
+function renderMarkdown(content: string, topic: string): React.ReactElement[] {
   const lines = content.split("\n");
-  const elements: JSX.Element[] = [];
+  const elements: React.ReactElement[] = [];
   let paragraphCount = 0;
   let listItems: { type: "ul" | "ol"; items: string[] } | null = null;
   let blockquoteLines: string[] = [];
