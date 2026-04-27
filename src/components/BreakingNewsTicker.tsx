@@ -3,12 +3,13 @@
 import Link from "next/link";
 
 const tickerItems = [
-  { text: "DV-2027 Green Card Lottery: New Passport Rule, $1 Fee, and Registration Updates", href: "/news/diversity-visa-lottery-selection-opens-march-2026" },
-  { text: "DV-2027 Registration Delayed — Expected to Open Late April 2026", href: "/news/dv-2027-diversity-visa-lottery-registration-announced" },
-  { text: "USCIS Fee Schedule Update — New Rates Effective January 2026", href: "/news/uscis-fee-schedule-update-2026" },
-  { text: "H-1B Visa Cap Reached in Record Time for FY2026", href: "/news/h1b-visa-cap-reached-record-time-fy2026" },
-  { text: "Green Card Backlog Reaches Historic Levels — 1.8M Petitions Waiting", href: "/news/green-card-backlog-historic-levels-congressional-action" },
-  { text: "State Dept. Revises Visa Interview Waiver Program for 2025", href: "/news/state-department-revises-visa-interview-waiver-2025" },
+  { text: "April/May 2026 Visa Bulletin: F-2A Category Remains Current for All Countries", href: "/news/diversity-visa-lottery-selection-opens-march-2026" },
+  { text: "USCIS Completes FY 2027 H-1B Lottery Selection — Filing Opened April 1", href: "/news/h1b-visa-cap-reached-record-time-fy2026" },
+  { text: "H-2B Supplemental Cap: Filing for 18,490 Visas Begins April 24, 2026", href: "/news/uscis-fee-schedule-update-2026" },
+  { text: "New Form I-129 Edition (02/27/26) Now Required — USCIS Rejects Old Versions", href: "/news/uscis-fee-schedule-update-2026" },
+  { text: "Nationality-Based Visa Holds in Effect for 75 Countries Since January 2026", href: "/news/travel-ban-updates-country-restrictions-waivers" },
+  { text: "Social Media Review Expanded to K-1, H-3, R-1 Visas — Effective March 30, 2026", href: "/news/travel-ban-updates-country-restrictions-waivers" },
+  { text: "EAD Validity Reduced from 5 Years to 18 Months for Certain Categories", href: "/news/uscis-fee-schedule-update-2026" },
 ];
 
 export default function BreakingNewsTicker() {

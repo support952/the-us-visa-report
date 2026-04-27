@@ -11,6 +11,7 @@ import {
 import VisaSuccessTracker from "@/components/VisaSuccessTracker";
 import EligibilityQuiz from "@/components/EligibilityQuiz";
 import { NewsletterInline } from "@/components/NewsletterSignup";
+import ImmigrantStories from "@/components/ImmigrantStories";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -75,8 +76,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── NEWSLETTER — white ── */}
+      {/* ── IMMIGRANT STORIES — white ── */}
       <section style={{ background: "#ffffff" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
+          <ImmigrantStories />
+        </div>
+      </section>
+
+      {/* ── NEWSLETTER — cream ── */}
+      <section style={{ background: "#f9f9f7" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
           <NewsletterInline />
         </div>

@@ -6,7 +6,11 @@
     "excerpt": "Registration for the DV-2027 Diversity Visa Lottery opens in October 2025, giving eligible applicants worldwide a 30-day window to enter the annual green card drawing.",
     "category": "DV Lottery",
     "publishedDate": "2025-10-02",
-    "author": { "name": "Sarah Mitchell", "role": "Senior Immigration Analyst", "avatar": "/authors/sm.jpg" },
+    "author": {
+      "name": "Sarah Mitchell",
+      "role": "Senior Immigration Analyst",
+      "avatar": "/authors/sm.jpg"
+    },
     "readTime": 6,
     "isFeatured": false,
     "isBreaking": false,
@@ -20,12 +24,16 @@
     "excerpt": "Breaking: New federal rules now require a mandatory passport scan, a $1 electronic fee, and stricter photo standards for DV-2027 registration — the most sweeping changes to the lottery entry process in years.",
     "category": "DV Lottery",
     "publishedDate": "2026-04-10",
-    "author": { "name": "James Thornton", "role": "Chief Immigration Correspondent", "avatar": "/authors/jt.jpg" },
+    "author": {
+      "name": "James Thornton",
+      "role": "Chief Immigration Correspondent",
+      "avatar": "/authors/jt.jpg"
+    },
     "readTime": 9,
     "isFeatured": true,
     "isBreaking": true,
     "image": "/images/breaking-news.jpg",
-    "content": "Significant administrative changes are coming to the DV-2027 Diversity Visa Program, with new federal rules taking effect as of April 10, 2026 that will fundamentally alter the entry process. Every applicant needs to understand these updates to remain eligible.\n\n## New Requirements for DV-2027\n\nAccording to recent filings and official guidance, three major changes are now in effect:\n\n- **Mandatory Passport Rule**: All principal applicants must possess a valid, unexpired passport at the time of entry. Applicants must enter passport details and upload a digital scan of the biographic page.\n- **$1 Registration Fee**: For the first time in program history, a non-refundable $1 electronic registration fee is required to submit an entry.\n- **Delayed Opening**: Registration has been postponed from the traditional October window to implement these technical changes. The system is expected to go live in the second half of April 2026.\n\n## Standard Eligibility Requirements\n\nLegal analysts confirm that the core eligibility criteria remain unchanged:\n\n- **Education or Work Experience**: Applicants must have a high school education (completion of a 12-year course) or two years of qualifying work experience within the last five years in a designated occupation.\n- **Random Selection**: Winners continue to be chosen by a random computer drawing from all qualified entries.\n- **Photo Standards**: Photos must be recent (taken within the last six months), feature a plain white background, and contain no eyeglasses.\n\n## Critical Rules and Common Pitfalls\n\nBased on historical processing data, the following rules are the most common sources of disqualification:\n\n- **One Entry Per Person**: Duplicate entries result in automatic disqualification. However, married couples may each submit a separate entry if both qualify independently.\n- **Family Disclosure**: All spouses and unmarried children under 21 must be listed, even if they do not intend to migrate. Omitting a family member leads to disqualification at the interview stage.\n- **Country of Birth**: Eligibility is determined by country of birth, not current citizenship or residence. Applicants born in ineligible countries may claim a spouse's or parent's birth country under certain conditions.\n- **Confirmation Number**: The confirmation number provided at the end of the entry must be saved. Without it, there is no way to check selection status.\n\n## Technical Changes to the Entry Form\n\nThe electronic entry form (DS-5501) has been updated with more precise language to match official U.S. government identification standards. The form now uses \"Sex\" instead of \"Gender\" and requires exact \"Date of Birth\" as it appears on documents rather than calculated age.\n\n> \"The Department has implemented enhanced metadata analysis and facial recognition technology to detect reused photographs and AI-modified images. Applicants should ensure all submissions contain original, unaltered documentation.\" — Bureau of Consular Affairs Advisory\n\n## Scam Advisory\n\nThe Department of State has issued its standard advisory: there is only one official website for DV Lottery registration and results. The Department never sends emails or letters notifying individuals of their selection. Status must be checked manually at dvprogram.state.gov using the confirmation number. Any communication claiming to be from the DV Lottery and requesting payment or personal information should be reported immediately.\n\n## Post-Selection Processing\n\nPolicy analysts note that the Department typically selects between 100,000 and 120,000 applicants for approximately 55,000 available visas. Selected applicants must complete Form DS-260, gather civil and police certificates, undergo medical examinations, and attend a consular interview. The window between selection and interview processing can be shorter than many applicants anticipate."
+    "content": "Significant administrative changes are coming to the DV-2027 Diversity Visa Program, with new federal rules taking effect as of April 10, 2026 that will fundamentally alter the entry process. Every applicant needs to understand these updates to remain eligible.\n\n## New Requirements for DV-2027\n\nAccording to recent filings and official guidance, three major changes are now in effect:\n\n- **Mandatory Passport Rule**: All principal applicants must possess a valid, unexpired passport at the time of entry. Applicants must enter passport details and upload a digital scan of the biographic page.\n- **$1 Registration Fee**: For the first time in program history, a non-refundable $1 electronic registration fee is required to submit an entry.\n- **Delayed Opening**: Registration has been postponed from the traditional October window to implement these technical changes. The system is expected to go live in the second half of April 2026.\n\n## Standard Eligibility Requirements\n\nLegal analysts confirm that the core eligibility criteria remain unchanged:\n\n- **Education or Work Experience**: Applicants must have a high school education (completion of a 12-year course) or two years of qualifying work experience within the last five years in a designated occupation.\n- **Random Selection**: Winners continue to be chosen by a random computer drawing from all qualified entries.\n- **Photo Standards**: Photos must be recent (taken within the last six months), feature a plain white background, and contain no eyeglasses.\n\n## Critical Rules and Common Pitfalls\n\nBased on historical processing data, the following rules are the most common sources of disqualification:\n\n- **One Entry Per Person**: Duplicate entries result in automatic disqualification. However, married couples may each submit a separate entry if both qualify independently.\n- **Family Disclosure**: All spouses and unmarried children under 21 must be listed, even if they do not intend to migrate. Omitting a family member leads to disqualification at the interview stage.\n- **Country of Birth**: Eligibility is determined by country of birth, not current citizenship or residence. Applicants born in ineligible countries may claim a spouse's or parent's birth country under certain conditions.\n- **Confirmation Number**: The confirmation number provided at the end of the entry must be saved. Without it, there is no way to check selection status.\n\n## Technical Changes to the Entry Form\n\nThe electronic entry form (DS-5501) has been updated with more precise language to match official U.S. government identification standards. The form now uses \"Sex\" instead of \"Gender\" and requires exact \"Date of Birth\" as it appears on documents rather than calculated age.\n\n> \"The Department has implemented enhanced metadata analysis and facial recognition technology to detect reused photographs and AI-modified images. Applicants should ensure all submissions contain original, unaltered documentation.\" — Bureau of Consular Affairs Advisory\n\n## Enhanced Vetting and National Security Holds\n\nSeveral new security measures are now in effect that may impact applicants:\n\n- **Nationality-Based Holds**: A pause on immigrant visa (green card) issuance is currently in effect for nationals of 75 high-risk countries as of January 2026.\n- **Social Media Review**: Effective March 30, 2026, online presence reviews have expanded to more nonimmigrant visa categories (including K-1, H-3, and R-1), requiring applicants to set their social media profiles to public or open for review.\n- **EAD Validity**: The maximum validity period for certain Employment Authorization Documents (EADs) has been reduced from 5 years back to 18 months.\n\n## Post-Selection Processing\n\nPolicy analysts note that the Department typically selects between 100,000 and 120,000 applicants for approximately 55,000 available visas. Selected applicants must complete Form DS-260, gather civil and police certificates, undergo medical examinations, and attend a consular interview. The window between selection and interview processing can be shorter than many applicants anticipate."
   },
   {
     "id": 3,
@@ -34,7 +42,11 @@
     "excerpt": "USCIS confirms the H-1B regular cap and advanced degree exemption for fiscal year 2026 were filled within the first week of registration, underscoring surging employer demand.",
     "category": "Visa Types",
     "publishedDate": "2025-04-15",
-    "author": { "name": "Elena Rodriguez", "role": "Immigration Policy Reporter", "avatar": "/authors/er.jpg" },
+    "author": {
+      "name": "Elena Rodriguez",
+      "role": "Immigration Policy Reporter",
+      "avatar": "/authors/er.jpg"
+    },
     "readTime": 5,
     "isFeatured": false,
     "isBreaking": false,
@@ -48,7 +60,11 @@
     "excerpt": "Fresh processing data shows faster turnaround in some employment-based categories, but applicants from India and China still face backlogs stretching years or even decades.",
     "category": "Analysis",
     "publishedDate": "2025-08-22",
-    "author": { "name": "Sarah Mitchell", "role": "Senior Immigration Analyst", "avatar": "/authors/sm.jpg" },
+    "author": {
+      "name": "Sarah Mitchell",
+      "role": "Senior Immigration Analyst",
+      "avatar": "/authors/sm.jpg"
+    },
     "readTime": 8,
     "isFeatured": false,
     "isBreaking": false,
@@ -62,7 +78,11 @@
     "excerpt": "Selection data from the DV-2026 cycle reveals shifting regional patterns, with Africa continuing to dominate allocations and overall entry volume climbing 8% year over year.",
     "category": "DV Lottery",
     "publishedDate": "2025-06-18",
-    "author": { "name": "James Thornton", "role": "Chief Immigration Correspondent", "avatar": "/authors/jt.jpg" },
+    "author": {
+      "name": "James Thornton",
+      "role": "Chief Immigration Correspondent",
+      "avatar": "/authors/jt.jpg"
+    },
     "readTime": 10,
     "isFeatured": false,
     "isBreaking": false,
@@ -76,7 +96,11 @@
     "excerpt": "A landmark federal court decision reshapes the legal landscape for DACA recipients seeking permanent resident status, drawing sharp debate among immigration attorneys.",
     "category": "Latest News",
     "publishedDate": "2025-02-14",
-    "author": { "name": "Elena Rodriguez", "role": "Immigration Policy Reporter", "avatar": "/authors/er.jpg" },
+    "author": {
+      "name": "Elena Rodriguez",
+      "role": "Immigration Policy Reporter",
+      "avatar": "/authors/er.jpg"
+    },
     "readTime": 7,
     "isFeatured": false,
     "isBreaking": false,
@@ -90,7 +114,11 @@
     "excerpt": "Revised interview waiver rules expand eligibility for some visa renewals while tightening requirements for student and exchange categories, effective January 2025.",
     "category": "Visa Types",
     "publishedDate": "2024-12-05",
-    "author": { "name": "Michael Chen", "role": "Consular Affairs Analyst", "avatar": "/authors/mc.jpg" },
+    "author": {
+      "name": "Michael Chen",
+      "role": "Consular Affairs Analyst",
+      "avatar": "/authors/mc.jpg"
+    },
     "readTime": 5,
     "isFeatured": false,
     "isBreaking": false,
@@ -104,7 +132,11 @@
     "excerpt": "Final DV-2025 numbers show 54,834 diversity visas issued — nearly the full annual allocation — marking a strong rebound from pandemic-era shortfalls.",
     "category": "DV Lottery",
     "publishedDate": "2024-10-30",
-    "author": { "name": "Sarah Mitchell", "role": "Senior Immigration Analyst", "avatar": "/authors/sm.jpg" },
+    "author": {
+      "name": "Sarah Mitchell",
+      "role": "Senior Immigration Analyst",
+      "avatar": "/authors/sm.jpg"
+    },
     "readTime": 6,
     "isFeatured": false,
     "isBreaking": false,
@@ -118,7 +150,11 @@
     "excerpt": "From tighter H-1B scrutiny to expanded premium processing, a wave of executive orders is reshaping the immigration landscape across employment, family, and humanitarian categories.",
     "category": "Analysis",
     "publishedDate": "2025-03-28",
-    "author": { "name": "James Thornton", "role": "Chief Immigration Correspondent", "avatar": "/authors/jt.jpg" },
+    "author": {
+      "name": "James Thornton",
+      "role": "Chief Immigration Correspondent",
+      "avatar": "/authors/jt.jpg"
+    },
     "readTime": 12,
     "isFeatured": false,
     "isBreaking": false,
@@ -132,7 +168,11 @@
     "excerpt": "The latest Global Mobility Index ranks the United States as the world's most desired immigration destination, leading second-place Germany by a 3-to-1 margin even amid policy turbulence.",
     "category": "Analysis",
     "publishedDate": "2024-07-15",
-    "author": { "name": "Michael Chen", "role": "Consular Affairs Analyst", "avatar": "/authors/mc.jpg" },
+    "author": {
+      "name": "Michael Chen",
+      "role": "Consular Affairs Analyst",
+      "avatar": "/authors/mc.jpg"
+    },
     "readTime": 9,
     "isFeatured": false,
     "isBreaking": false,
@@ -146,7 +186,11 @@
     "excerpt": "Enhanced fingerprint scanning, stricter photo specs, and digital signature capture are now standard at U.S. consular posts, adding minutes to appointments but promising faster renewals ahead.",
     "category": "Visa Types",
     "publishedDate": "2024-01-22",
-    "author": { "name": "Elena Rodriguez", "role": "Immigration Policy Reporter", "avatar": "/authors/er.jpg" },
+    "author": {
+      "name": "Elena Rodriguez",
+      "role": "Immigration Policy Reporter",
+      "avatar": "/authors/er.jpg"
+    },
     "readTime": 4,
     "isFeatured": false,
     "isBreaking": false,
@@ -160,7 +204,11 @@
     "excerpt": "Over 20 million qualified entries poured into the DV-2024 Diversity Visa Lottery, shattering previous records and driving the selection rate below 0.6%.",
     "category": "DV Lottery",
     "publishedDate": "2023-05-15",
-    "author": { "name": "Sarah Mitchell", "role": "Senior Immigration Analyst", "avatar": "/authors/sm.jpg" },
+    "author": {
+      "name": "Sarah Mitchell",
+      "role": "Senior Immigration Analyst",
+      "avatar": "/authors/sm.jpg"
+    },
     "readTime": 5,
     "isFeatured": false,
     "isBreaking": false,
@@ -174,7 +222,11 @@
     "excerpt": "A detailed look at all five employment-based preference categories — from EB-1 extraordinary ability to EB-5 investor visas — with current processing timelines and strategic tips.",
     "category": "Analysis",
     "publishedDate": "2023-09-10",
-    "author": { "name": "Michael Chen", "role": "Consular Affairs Analyst", "avatar": "/authors/mc.jpg" },
+    "author": {
+      "name": "Michael Chen",
+      "role": "Consular Affairs Analyst",
+      "avatar": "/authors/mc.jpg"
+    },
     "readTime": 15,
     "isFeatured": false,
     "isBreaking": false,
@@ -188,7 +240,11 @@
     "excerpt": "A postmortem of the DV-2023 cycle highlights the preventable mistakes that cost selectees their visas — and what future applicants can do differently.",
     "category": "DV Lottery",
     "publishedDate": "2022-11-08",
-    "author": { "name": "James Thornton", "role": "Chief Immigration Correspondent", "avatar": "/authors/jt.jpg" },
+    "author": {
+      "name": "James Thornton",
+      "role": "Chief Immigration Correspondent",
+      "avatar": "/authors/jt.jpg"
+    },
     "readTime": 8,
     "isFeatured": false,
     "isBreaking": false,
@@ -202,7 +258,11 @@
     "excerpt": "The monthly visa bulletin controls when green card applicants can move forward, yet few understand how it works. Here is what the priority date system means for your case.",
     "category": "Analysis",
     "publishedDate": "2022-06-20",
-    "author": { "name": "Sarah Mitchell", "role": "Senior Immigration Analyst", "avatar": "/authors/sm.jpg" },
+    "author": {
+      "name": "Sarah Mitchell",
+      "role": "Senior Immigration Analyst",
+      "avatar": "/authors/sm.jpg"
+    },
     "readTime": 11,
     "isFeatured": false,
     "isBreaking": false,
@@ -216,7 +276,11 @@
     "excerpt": "A revised USCIS fee schedule takes effect in January 2026, with increases averaging 15-20% across most categories — though expanded fee waivers offer some relief.",
     "category": "Latest News",
     "publishedDate": "2026-01-15",
-    "author": { "name": "Elena Rodriguez", "role": "Immigration Policy Reporter", "avatar": "/authors/er.jpg" },
+    "author": {
+      "name": "Elena Rodriguez",
+      "role": "Immigration Policy Reporter",
+      "avatar": "/authors/er.jpg"
+    },
     "readTime": 6,
     "isFeatured": false,
     "isBreaking": false,
@@ -230,7 +294,11 @@
     "excerpt": "A current rundown of travel restrictions by country, available waiver paths, and practical steps for affected travelers — including DV Lottery selectees facing tight deadlines.",
     "category": "Visa Types",
     "publishedDate": "2024-04-18",
-    "author": { "name": "James Thornton", "role": "Chief Immigration Correspondent", "avatar": "/authors/jt.jpg" },
+    "author": {
+      "name": "James Thornton",
+      "role": "Chief Immigration Correspondent",
+      "avatar": "/authors/jt.jpg"
+    },
     "readTime": 7,
     "isFeatured": false,
     "isBreaking": false,
@@ -244,7 +312,11 @@
     "excerpt": "More than 1.8 million approved petitions are stuck waiting for visa numbers, with some Indian nationals facing 40-year queues. Business and advocacy groups are pressing Congress to act.",
     "category": "Latest News",
     "publishedDate": "2026-02-28",
-    "author": { "name": "Michael Chen", "role": "Consular Affairs Analyst", "avatar": "/authors/mc.jpg" },
+    "author": {
+      "name": "Michael Chen",
+      "role": "Consular Affairs Analyst",
+      "avatar": "/authors/mc.jpg"
+    },
     "readTime": 8,
     "isFeatured": false,
     "isBreaking": false,
