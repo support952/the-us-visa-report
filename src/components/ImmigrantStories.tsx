@@ -5,7 +5,7 @@ const stories = [
     name: "Omar Yaghi",
     title: "From Refugee to Nobel Laureate",
     origin: "Jordan",
-    image: "/images/stories/omar-yaghi.svg",
+    image: "/images/stories/omar-yaghi.jpg",
     summary:
       "Born in Amman, Jordan, to a family of Palestinian refugees, Omar Yaghi grew up in a household with no electricity and limited resources. At age 15, his father sent him alone to America. Arriving in New York as a teenager with barely any English, he started at a community college, supporting himself by mopping floors and working in grocery stores while studying chemistry late into the night. Today, he is a professor at UC Berkeley and won the 2025 Nobel Prize in Chemistry for inventing materials that can pull clean drinking water out of thin desert air — a technology now saving lives in water-scarce regions.",
   },
@@ -13,7 +13,7 @@ const stories = [
     name: "Yoshinobu Yamamoto",
     title: "World Series MVP",
     origin: "Japan",
-    image: "/images/stories/yoshinobu-yamamoto.svg",
+    image: "/images/stories/yoshinobu-yamamoto.jpg",
     summary:
       "After becoming the greatest pitcher in Japanese history, Yamamoto signed a record-breaking $325 million contract with the Los Angeles Dodgers in 2024. The transition was not easy — he had to adapt to a different ball, a different schedule, and a language he did not speak fluently. Critics doubted whether he could handle the pressure of the U.S. Major Leagues. He silenced them in the 2025 World Series, pitching a masterpiece that led the Dodgers to a championship and earning him the World Series MVP. He is now the face of a new generation of Japanese immigrants reshaping American culture and sports.",
   },
@@ -21,7 +21,7 @@ const stories = [
     name: "Weini Kelati",
     title: "From Asylum Seeker to Olympian",
     origin: "Eritrea",
-    image: "/images/stories/weini-kelati.svg",
+    image: "/images/stories/weini-kelati.jpg",
     summary:
       "In 2014, at age 17, Weini Kelati was one of the top junior runners in the world. When she traveled to Oregon for the World Junior Championships, she realized this was her only chance. She disappeared from her team's hotel and sought asylum. For months she lived in hiding in Virginia, barely speaking English and terrified of being deported. Once granted asylum, she dominated college track. In 2024, she officially became a U.S. citizen and, just weeks later, won the 10,000-meter race at the U.S. Olympic Trials, representing the U.S. in Paris.",
   },
@@ -29,7 +29,7 @@ const stories = [
     name: "Joel Mokyr",
     title: "Nobel Prize in Economics",
     origin: "Netherlands",
-    image: "/images/stories/joel-mokyr.svg",
+    image: "/images/stories/joel-mokyr.jpg",
     summary:
       "Born in 1946 in the Netherlands to Holocaust survivors, Mokyr moved to the U.S. to pursue his PhD at Yale. He spent decades as a professor at Northwestern University, arguing that useful knowledge and the free exchange of ideas are the true engines of a wealthy society. In 2025, he was awarded the Nobel Prize in Economics for proving that a society's openness to new ideas — much like the openness that allowed him to thrive in the U.S. — is what drives long-term prosperity.",
   },
