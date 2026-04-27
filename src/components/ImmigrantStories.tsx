@@ -57,7 +57,7 @@ export default function ImmigrantStories() {
                   src={story.image}
                   alt={story.name}
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 768px) 100vw, 40vw"
                 />
               </div>
